@@ -1,9 +1,11 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 const routes = new Router();
+const user = [];
+routes.get('/', (req, res) => {
+  user.push('Adriano');
 
-routes.get("/", (req, res) => {
-  return res.json({ message: "Hello Adriano" });
+  return res.json({ message: 'Hello Adriano' });
 });
 
 export default routes;
